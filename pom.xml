@@ -236,6 +236,19 @@
             <url>${ala.repository.url}</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
+
+	<repository>
+	  <id>nectar-nexus-repo-test</id>
+	  <name>Internal Releases</name>
+	  <url>http://130.56.249.242/nexus/content/repositories/releases/</url>
+	</repository>
+
+	<snapshotRepository>
+	  <id>nectar-nexus-repo-test</id>
+	  <name>Internal Releases</name>
+	  <url>http://130.56.249.242/nexus/content/repositories/snapshots/</url>
+	</snapshotRepository>
+
     </distributionManagement>
 
 	<repositories>
