@@ -1,0 +1,19 @@
+language: java
+
+jdk:
+  - oraclejdk7
+
+branches:
+  only:
+    - master
+
+before_script:
+  - mkdir -p ~/.m2
+  - wget -q -O ~/.m2/settings.xml https://raw.githubusercontent.com/mbohun/misc/master/travis_maven_m2_settings.xml
+
+script: "mvn clean install deploy"
+
+env:
+  global:
+    - secure: "KTiWryGgngHhZfAZ/0UueRBf6ka1M8ZpnUZd5OiWFFeqPQ7iVlT/V3xT8MJsCKmeBHETpRDqFTY8MqjfQjPfDaB5gP30n2DvwouzmDPwM1XIFAc+HnVfWMoPKuBvoY+OdX0LipLos2E1E45tyRMNHKWQ2zUg8i2GwYGSmQ8KZhs="
+    - secure: "gSd+LVFtE8L80h/D5eOW5DdUtTu4xdeFbRdhwGcTOppPCyMFoiqgrExwlMwzjeiQbR+RF4wVGSTFy8tuBeadzIfrMUk7ypQMSRbtQHY/5arciO3jbpAvEb97fXB77u15VqxkIe7/K1moqXZI/az81LpRmzVRqZWWGshl7yOXv2Y="
